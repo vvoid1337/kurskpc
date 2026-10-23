@@ -1,0 +1,9 @@
+# Excel
+*.xlsx
+*.xls
+
+# OS and IDE files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
