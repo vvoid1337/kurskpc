@@ -5,7 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>KurskPC Lab</title>
   <meta name="description" content="Честный частный компьютерный мастер в Курске. Чистка ПК и ноутбуков, ТО PlayStation и Xbox, оптимизация производительности, сборка и апгрейд. Фиксация цен ДО начала работ. Honeywell PTM7950.">
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='6' fill='%230284c7'/><text x='16' y='21' font-size='14' font-weight='bold' font-family='sans-serif' fill='%23ffffff' text-anchor='middle'>PC</text></svg>">
+  <link rel="icon" type="image/jpeg" href="logo.jpg">
+
+  <!-- Open Graph / Метаданные соцсетей -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="KurskPC Lab — Честный компьютерный мастер в Курске">
+  <meta property="og:description" content="Ремонт и ТО компьютеров, ноутбуков и консолей PS/Xbox. Фиксация цен до начала работ, оплата по факту проверки.">
+  <meta property="og:image" content="logo.jpg">
+
   <link rel="stylesheet" href="styles/main.css">
 
   <script type="application/ld+json">
@@ -14,7 +21,8 @@
     "@type":"ComputerRepairService",
     "name":"KurskPC Lab",
     "description":"Частный компьютерный мастер в Курске. Честный прайс, выезд на дом.",
-    "priceRange":"400–2400 ₽",
+    "priceRange":"200–2400 ₽",
+    "telephone":"+7-999-607-73-65",
     "address":{"@type":"PostalAddress","addressLocality":"Курск","addressCountry":"RU"},
     "openingHours":"Mo-Su 09:00-21:00"
   }
@@ -24,10 +32,10 @@
 
 <!-- ======== Header ======== -->
 <header class="header" id="header">
-  <div class="wrap header-inner">
+  <div class="wrap wrap-full header-inner">
     <a href="#" class="logo">
-      <div class="logo-mark">PC</div>
-      <div><span class="logo-text">KurskPC <span>Lab</span></span><span class="logo-sub">Честный сервис · Курск</span></div>
+      <img src="logo.jpg" alt="KurskPC Lab" class="logo-icon" width="50" height="50">
+      <div class="logo-titles"><span class="logo-text">KurskPC <span>Lab</span></span><span class="logo-sub">Честный сервис · Курск</span></div>
     </a>
 
     <nav class="nav" id="nav">
@@ -39,116 +47,69 @@
 
     <div class="header-right">
       <span class="online-label"><span class="online-dot"></span> <span>На связи</span></span>
-      <a href="https://t.me/kurskpc_master" target="_blank" rel="noopener" class="btn btn-tg btn-sm">Telegram</a>
-      <button class="burger" id="burger" aria-label="Меню" aria-expanded="false">☰</button>
+      <a href="tel:+79996077365" class="header-phone">+7 (999) 607-73-65</a>
+      <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg btn-sm">Telegram</a>
+      <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk btn-sm">ВКонтакте</a>
+      <a href="tel:+79996077365" class="header-call-btn" aria-label="Позвонить мастеру">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+        <span>Позвонить</span>
+      </a>
+      <button class="burger" id="burger" aria-label="Меню навигации" aria-expanded="false">
+        <span class="burger-line"></span>
+        <span class="burger-line"></span>
+      </button>
     </div>
   </div>
 </header>
+<div class="nav-backdrop" id="navBackdrop"></div>
 
 <!-- ======== Hero ======== -->
 <section class="hero" id="hero">
   <div class="wrap hero-grid">
     <div>
-      <h1>Честный ремонт и&nbsp;обслуживание ПК в&nbsp;Курске</h1>
-      <p class="hero-desc">Работаю как частный мастер: без навязанных услуг и сервисных наценок. Фиксация стоимости <strong>до начала работ</strong>, оригинальные термоинтерфейсы, оплата строго после стресс-теста.</p>
+      <h1>Ремонт и&nbsp;обслуживание компьютеров в&nbsp;Курске</h1>
+      <p class="hero-desc">Частный мастер с выездом на дом. Устраняю перегрев, тормоза и поломки, чищу от пыли, меняю детали и собираю ПК под ваши задачи. Стоимость согласуем до начала работ, оплата — только за результат.</p>
 
       <div class="props">
         <div class="prop">
           <span class="prop-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
           </span>
-          <div><b>Бесплатный выезд</b><span>По Курску при заказе работ</span></div>
+          <div><b>Выезд на дом — 0 ₽</b><span>По Курску при выполнении работ</span></div>
         </div>
         <div class="prop">
           <span class="prop-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 2v7.31M14 2v7.31M8.5 2h7M14 9.3a6.5 6.5 0 1 1-4 0"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path><circle cx="12" cy="12" r="3"></circle></svg>
           </span>
-          <div><b>Honeywell PTM7950</b><span>Фазовый переход для GPU / ноутбуков</span></div>
+          <div><b>Ремонт при вас</b><span>Вся работа открыто на ваших глазах</span></div>
         </div>
         <div class="prop">
           <span class="prop-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>
           </span>
-          <div><b>Фиксация сметы</b><span>Цена не изменится в процессе</span></div>
+          <div><b>Фиксация цены</b><span>Смета не изменится в процессе</span></div>
         </div>
         <div class="prop">
           <span class="prop-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
           </span>
-          <div><b>Гарантия до 90 дней</b><span>Акт выполненных работ</span></div>
+          <div><b>Гарантия до 90 дней</b><span>Прямая ответственность мастера</span></div>
         </div>
       </div>
 
       <div class="hero-btns">
-        <a href="https://t.me/kurskpc_master" target="_blank" rel="noopener" class="btn btn-tg">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm4.64 6.8c-.15 1.58-.8 5.42-1.13 7.19-.14.75-.42 1-.68 1.03-.58.05-1.02-.38-1.58-.75-.88-.58-1.38-.94-2.23-1.5-.99-.65-.35-1.01.22-1.59.15-.15 2.71-2.48 2.76-2.69a.2.2 0 00-.05-.18c-.06-.05-.14-.03-.21-.02-.09.02-1.49.95-4.22 2.79-.4.27-.76.41-1.08.4-.36-.01-1.04-.2-1.55-.37-.63-.2-1.12-.31-1.08-.66.02-.18.27-.36.74-.55 2.92-1.27 4.86-2.11 5.83-2.52 2.77-1.16 3.35-1.36 3.73-1.36.08 0 .27.02.39.12.1.08.13.19.14.27-.01.06.01.24 0 .38z"/></svg>
-          Написать в Telegram
+        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
+          Telegram
         </a>
-        <a href="https://wa.me/79000000000" target="_blank" rel="noopener" class="btn btn-wa">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12.04 2C6.58 2 2.13 6.45 2.13 11.91c0 1.75.46 3.45 1.32 4.95L2.05 22l5.25-1.38c1.45.79 3.08 1.21 4.74 1.21 5.46 0 9.91-4.45 9.91-9.91 0-2.65-1.03-5.14-2.9-7.01A9.816 9.816 0 0 0 12.04 2zm5.78 14.07c-.24.68-1.4 1.25-1.93 1.29-.49.04-1.12.06-3.23-.78-2.69-1.07-4.42-3.83-4.55-4.01-.13-.18-1.08-1.44-1.08-2.75s.68-1.95.93-2.22c.24-.26.54-.33.72-.33.18 0 .36 0 .52.01.17.01.39-.06.61.47.24.57.8 1.95.87 2.09.07.14.12.31.02.5-.09.18-.14.29-.28.45-.14.16-.3.35-.43.47-.14.14-.29.3-.12.59.17.29.74 1.22 1.58 1.97 1.09.97 2 .1.27 2.29 1.44.29.17.46.14.63-.05.17-.19.74-.86.94-1.16.2-.29.4-.24.67-.14.28.1 1.76.83 2.06.98.3.15.5.22.57.35.07.12.07.71-.17 1.39z"/></svg>
-          WhatsApp
+        <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk">
+          <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
+          ВКонтакте
         </a>
-        <a href="tel:+79000000000" class="btn btn-outline">
+        <a href="tel:+79996077365" class="btn btn-outline">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-          Позвонить
+          +7 (999) 607-73-65
         </a>
-      </div>
-    </div>
-
-    <!-- Условия выезда и карточка мастера (вместо терминала) -->
-    <div class="hero-card-side">
-      <div class="hero-summary-card">
-        <div class="summary-card-head">
-          <div>
-            <span class="summary-badge"><span class="online-dot"></span> На связи онлайн</span>
-            <h3 class="summary-title">Условия обслуживания</h3>
-          </div>
-          <span class="summary-city">Курск</span>
-        </div>
-
-        <ul class="summary-list">
-          <li class="summary-item">
-            <span class="summary-check">✓</span>
-            <div>
-              <strong>Выезд на дом — 0 ₽</strong>
-              <p>По городу при выполнении любых работ из прайса</p>
-            </div>
-          </li>
-          <li class="summary-item">
-            <span class="summary-check">✓</span>
-            <div>
-              <strong>Фиксация сметы до начала ремонта</strong>
-              <p>Точная сумма озвучивается до разборки техники</p>
-            </div>
-          </li>
-          <li class="summary-item">
-            <span class="summary-check">✓</span>
-            <div>
-              <strong>Оригинальные термоинтерфейсы</strong>
-              <p>Honeywell PTM7950, Arctic MX-4, Thermalright Odyssey</p>
-            </div>
-          </li>
-          <li class="summary-item">
-            <span class="summary-check">✓</span>
-            <div>
-              <strong>Стресс-тест перед оплатой</strong>
-              <p>Проверка температур в OCCT / FurMark при клиенте</p>
-            </div>
-          </li>
-          <li class="summary-item">
-            <span class="summary-check">✓</span>
-            <div>
-              <strong>Гарантия до 90 дней</strong>
-              <p>Прямая ответственность частного мастера за результат</p>
-            </div>
-          </li>
-        </ul>
-
-        <div class="summary-action">
-          <a href="https://t.me/kurskpc_master" target="_blank" rel="noopener" class="btn btn-tg btn-full">
-            Написать мастеру в Telegram
-          </a>
-        </div>
       </div>
     </div>
   </div>
@@ -175,9 +136,9 @@
       <div class="cmp-card cmp-good">
         <div class="cmp-head"><div class="cmp-icon">✓</div><h3 class="cmp-h">KurskPC Lab</h3></div>
         <ul class="cmp-list">
-          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Цена фиксируется до начала</b><p>По публичному прайс-листу. Не устроит — ничего не платите.</p></div></li>
-          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Honeywell PTM7950 и Arctic MX-4</b><p>Оригинальные термоинтерфейсы, работают годами.</p></div></li>
-          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Ремонт при вас, стресс-тест в OCCT</b><p>Оплата только после демонстрации низких температур.</p></div></li>
+          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Цена фиксируется до начала</b><p>По открытому прайс-листу. Не устроит — ничего не платите.</p></div></li>
+          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Качественные материалы</b><p>Оригинальные термоинтерфейсы длительного срока службы.</p></div></li>
+          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Ремонт и проверка при вас</b><p>Оплата только после вашей личной проверки работы техники.</p></div></li>
         </ul>
       </div>
     </div>
@@ -208,7 +169,7 @@
         <div class="pc-top"><div><span class="pc-code">HW-02</span></div><div class="pc-price">1 200 – 1 600 ₽</div></div>
         <h4 class="pc-name">Чистка стандартного ноутбука</h4>
         <p class="pc-desc">Разборка корпуса, удаление пылевого войлока с радиатора, чистка вентилятора, замена термоинтерфейса CPU/GPU.</p>
-        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>Honeywell вкл.</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
+        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>PTM7950</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
 
       <article class="price-card">
@@ -271,6 +232,13 @@
         <p class="pc-desc">Физическая замена диска 2.5", инициализация системы, установка последней прошивки через Recovery.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>40–60 мин</dd><dt>Материалы</dt><dd>Накопитель клиента</dd><dt>Гарантия</dt><dd>90 дней</dd></dl>
       </article>
+
+      <article class="price-card">
+        <div class="pc-top"><div><span class="pc-code">CS-06</span></div><div class="pc-price">900 ₽</div></div>
+        <h4 class="pc-name">Прошивка / активация HEN (PS4 / PS5)</h4>
+        <p class="pc-desc">Установка и настройка HEN / GoldHEN для запуска любых игр и приложений с флешки или внешнего диска. Только при условии подходящей версии прошивки консоли. Полная настройка хоста и подробная инструкция.</p>
+        <dl class="pc-meta"><dt>Время</dt><dd>40–80 мин</dd><dt>Материалы</dt><dd>ПО мастера</dd><dt>Гарантия</dt><dd>Консультация</dd></dl>
+      </article>
     </div>
 
     <!-- 3. Софт и Windows -->
@@ -278,14 +246,14 @@
     <div class="price-grid">
 
       <article class="price-card">
-        <div class="pc-top"><div><span class="pc-code">SW-01</span></div><div class="pc-price">1 100 ₽</div></div>
+        <div class="pc-top"><div><span class="pc-code">SW-01</span></div><div class="pc-price">900 ₽</div></div>
         <h4 class="pc-name">Чистая установка Windows 10/11</h4>
         <p class="pc-desc">Оригинальный дистрибутив с USB, официальные драйверы чипсета/видео, отключение телеметрии.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>40–60 мин</dd><dt>Материалы</dt><dd>Включено</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
 
       <article class="price-card">
-        <div class="pc-top"><div><span class="pc-code">SW-02</span> <span class="pc-badge">Выгодно</span></div><div class="pc-price">1 800 ₽</div></div>
+        <div class="pc-top"><div><span class="pc-code">SW-02</span> <span class="pc-badge">Выгодно</span></div><div class="pc-price">1 500 ₽</div></div>
         <h4 class="pc-name">Комплекс «Второе дыхание» (SSD + Windows)</h4>
         <p class="pc-desc">Подбор и монтаж SSD, чистая установка ОС, настройка драйверов, перенос фото/документов со старого HDD.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>1.5–2 часа</dd><dt>Материалы</dt><dd>SSD отдельно</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
@@ -306,7 +274,7 @@
       </article>
 
       <article class="price-card">
-        <div class="pc-top"><div><span class="pc-code">SW-05</span></div><div class="pc-price">700 ₽</div></div>
+        <div class="pc-top"><div><span class="pc-code">SW-05</span></div><div class="pc-price">300 ₽</div></div>
         <h4 class="pc-name">Настройка Wi-Fi роутера / принтера</h4>
         <p class="pc-desc">Настройка WPA3 шифрования, свободных каналов, подключение устройств и сетевой печати.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>30–50 мин</dd><dt>Материалы</dt><dd>Не требуются</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
@@ -358,14 +326,7 @@
       </article>
 
       <article class="price-card">
-        <div class="pc-top"><div><span class="pc-code">PC-03</span></div><div class="pc-price">1 000 ₽</div></div>
-        <h4 class="pc-name">Проверка железа с Авито (выезд)</h4>
-        <p class="pc-desc">Выезд с тестовым набором: FurMark, OCCT, TestMem5, CrystalDiskInfo, проверка пломб и следов ремонта.</p>
-        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>ПО для тестов</dd><dt>Гарантия</dt><dd>Заключение</dd></dl>
-      </article>
-
-      <article class="price-card">
-        <div class="pc-top"><div><span class="pc-code">PC-04</span></div><div class="pc-price">500 ₽</div></div>
+        <div class="pc-top"><div><span class="pc-code">PC-03</span></div><div class="pc-price">200–500 ₽</div></div>
         <h4 class="pc-name">Замена комплектующих (модульная)</h4>
         <p class="pc-desc">Замена БП, кулера, видеокарты, установка дополнительных планок ОЗУ или M.2 NVMe.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>20–40 мин</dd><dt>Материалы</dt><dd>По факту</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
@@ -417,23 +378,23 @@
     <div class="steps-grid">
       <div class="step-card">
         <div class="step-n">01</div>
-        <h3>Диагностика ДО</h3>
-        <p>В вашем присутствии проверяем включение, изображение, температуру и целостность корпуса.</p>
+        <h3>Диагностика</h3>
+        <p>В вашем присутствии осматриваем технику и точно определяем причину неисправности.</p>
       </div>
       <div class="step-card">
         <div class="step-n">02</div>
-        <h3>Фиксация цены</h3>
-        <p>Точная смета по прайсу ДО начала разборки устройства. Никаких скрытых платежей.</p>
+        <h3>Согласование цены</h3>
+        <p>Называем фиксированную стоимость по прайсу до начала ремонта. Без скрытых наценок.</p>
       </div>
       <div class="step-card">
         <div class="step-n">03</div>
-        <h3>Аккуратное ТО</h3>
-        <p>Удаление пыли, нанесение Honeywell PTM7950 / Arctic MX-4, бережная сборка.</p>
+        <h3>Выполнение работ</h3>
+        <p>Аккуратная чистка от пыли, замена термопасты и ремонт прямо у вас на глазах.</p>
       </div>
       <div class="step-card">
         <div class="step-n">04</div>
-        <h3>Стресс-тест и оплата</h3>
-        <p>15 мин в OCCT/FurMark, показ температур, гарантийный талон и оплата по факту (наличные/СБП).</p>
+        <h3>Проверка и оплата</h3>
+        <p>Проверяем стабильность работы техники, выдаём гарантию и только потом принимаем оплату.</p>
       </div>
     </div>
   </div>
@@ -443,8 +404,10 @@
 <section class="section section-alt" id="about">
   <div class="wrap master-grid">
     <div class="master-card-badge">
-      <div class="master-initials">АК</div>
-      <div class="master-name-text">Александр</div>
+      <div class="master-avatar">
+        <img src="logo.jpg" alt="Мастер Алексей - KurskPC Lab" class="master-avatar-img" width="88" height="88" loading="lazy">
+      </div>
+      <div class="master-name-text">Алексей</div>
       <div class="master-role-text">Частный компьютерный мастер</div>
       <div class="master-status-tag">
         <span class="online-dot"></span> На связи в Курске
@@ -456,13 +419,23 @@
       <h2 class="section-title">Делаю как для себя</h2>
       <blockquote class="master-quote">«Я не работаю на агрегаторы, где с мастера требуют содрать максимум. Вы общаетесь со мной, я ремонтирую вашу технику, и лично несу гарантию за каждый закрученный винт.»</blockquote>
       <div class="master-stats">
-        <div class="m-stat"><strong>7+ лет</strong><span>Опыт ремонта и сборки</span></div>
+        <div class="m-stat"><strong>10+ лет</strong><span>Опыт ремонта и сборки</span></div>
         <div class="m-stat"><strong>0 ₽</strong><span>Выезд по городу</span></div>
         <div class="m-stat"><strong>до 90 дней</strong><span>Гарантии</span></div>
       </div>
       <div class="hero-btns">
-        <a href="https://t.me/kurskpc_master" target="_blank" rel="noopener" class="btn btn-tg">Написать в Telegram</a>
-        <a href="tel:+79000000000" class="btn btn-outline">Позвонить</a>
+        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
+          Telegram
+        </a>
+        <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk">
+          <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
+          ВКонтакте
+        </a>
+        <a href="tel:+79996077365" class="btn btn-outline">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +7 (999) 607-73-65
+        </a>
       </div>
     </div>
   </div>
@@ -503,12 +476,12 @@
 
 <!-- ======== Footer / Contacts ======== -->
 <footer class="footer" id="contacts">
-  <div class="wrap">
+  <div class="wrap wrap-full">
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="#" class="logo">
-          <div class="logo-mark">PC</div>
-          <div><span class="logo-text">KurskPC <span>Lab</span></span><span class="logo-sub">Частный сервис</span></div>
+          <img src="logo.jpg" alt="KurskPC Lab" class="logo-icon" width="50" height="50">
+          <div><span class="logo-text">KurskPC <span>Lab</span></span><span class="logo-sub">Частный сервис · Курск</span></div>
         </a>
         <p>Честный компьютерный сервис в Курске. Фиксация цены до начала, оплата по результату.</p>
         <div class="chips">
@@ -522,7 +495,7 @@
       </div>
 
       <div>
-        <h4>Навигация</h4>
+        <h3>Навигация</h3>
         <div class="footer-links">
           <a href="#services">Прайс-лист</a>
           <a href="#consoles">PlayStation & Xbox</a>
@@ -534,27 +507,44 @@
       </div>
 
       <div>
-        <h4>Связь с мастером</h4>
-        <div class="contact-card">
-          <div class="c-row">
-            <span class="c-label">Телефон</span>
-            <div><a href="tel:+79000000000">+7 (9XX) XXX-XX-XX</a><small>Ежедневно 09:00–21:00</small></div>
-          </div>
-          <div class="c-row">
-            <span class="c-label">Telegram</span>
-            <div><a href="https://t.me/kurskpc_master" target="_blank" rel="noopener" class="c-link-tg">@kurskpc_master</a><small>Быстрый ответ в течение 10 мин</small></div>
-          </div>
-          <div class="c-row">
-            <span class="c-label">WhatsApp</span>
-            <div><a href="https://wa.me/79000000000" target="_blank" rel="noopener" class="c-link-wa">Чат в WhatsApp</a><small>Для фото и видео симптомов</small></div>
-          </div>
+        <h3>Связь с мастером</h3>
+        <p class="footer-contacts-sub">Выберите удобный способ связи:</p>
+        <div class="footer-contact-cards">
+          <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="footer-contact-link f-tg">
+            <div class="f-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
+            </div>
+            <div class="f-contact-meta">
+              <span class="f-contact-name">Telegram</span>
+              <span class="f-contact-handle">@kurskpc</span>
+            </div>
+          </a>
+
+          <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="footer-contact-link f-vk">
+            <div class="f-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
+            </div>
+            <div class="f-contact-meta">
+              <span class="f-contact-name">ВКонтакте</span>
+              <span class="f-contact-handle">vk.ru/kurskpclab</span>
+            </div>
+          </a>
+
+          <a href="tel:+79996077365" class="footer-contact-link f-phone">
+            <div class="f-contact-icon">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+            </div>
+            <div class="f-contact-meta">
+              <span class="f-contact-name">Телефон</span>
+              <span class="f-contact-handle">+7 (999) 607-73-65</span>
+            </div>
+          </a>
         </div>
       </div>
     </div>
 
     <div class="footer-bottom">
       <span>© 2026 KurskPC Lab. Частный мастер, г. Курск.</span>
-      <span>Фиксация цен · Оплата по факту стресс-теста</span>
     </div>
   </div>
 </footer>
