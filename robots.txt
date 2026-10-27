@@ -1,2 +1,11 @@
 User-agent: *
 Allow: /
+Allow: /styles/
+Allow: /scripts/
+Allow: /logo.jpg
+
+User-agent: Yandex
+Allow: /
+
+Sitemap: https://kurskpc.ru/sitemap.xml
+Host: https://kurskpc.ru

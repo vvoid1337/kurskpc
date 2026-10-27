@@ -527,6 +527,78 @@ button { font-family: inherit; cursor: pointer; }
   font-size: .8rem; color: var(--text-muted);
 }
 
+/* ==== Coverage & SEO Section ==== */
+.coverage-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+}
+.coverage-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px;
+  box-shadow: var(--shadow-sm);
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
+}
+.coverage-card:hover {
+  border-color: var(--blue-border);
+  box-shadow: var(--shadow-card);
+}
+.cov-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.cov-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-sm);
+  background: var(--blue-light);
+  color: var(--blue);
+  border: 1px solid var(--blue-border);
+  display: grid;
+  place-items: center;
+  flex-shrink: 0;
+}
+.cov-head h3 {
+  font-size: 1.18rem;
+  font-weight: 700;
+  color: var(--text-bright);
+}
+.cov-desc {
+  font-size: .92rem;
+  color: var(--text-dim);
+  margin-bottom: 18px;
+  line-height: 1.5;
+}
+.cov-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.cov-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: .88rem;
+  line-height: 1.55;
+  color: var(--text);
+}
+.cov-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 9px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--blue);
+}
+.cov-list strong {
+  color: var(--text-bright);
+}
+
 /* ==== Responsive ==== */
 @media(max-width: 1024px) {
   .props { grid-template-columns: repeat(2, 1fr); }
@@ -535,6 +607,7 @@ button { font-family: inherit; cursor: pointer; }
   .master-grid { grid-template-columns: 1fr; text-align: center; }
   .master-card-badge { max-width: 320px; margin: 0 auto; }
   .master-quote { border-left: none; border-top: 3px solid var(--lime); padding: 14px 16px; border-radius: var(--radius-sm); }
+  .coverage-grid { grid-template-columns: 1fr; }
   .footer-grid { grid-template-columns: 1fr; gap: 32px; }
 }
 @media(max-width: 768px) {
@@ -797,6 +870,7 @@ button { font-family: inherit; cursor: pointer; }
   .section { padding: 48px 0; }
   .wrap { padding: 0 16px; }
   .wrap-full { padding: 0 16px !important; }
+  .coverage-card { padding: 18px 16px; }
 }
 
 @media(max-width: 360px) {
