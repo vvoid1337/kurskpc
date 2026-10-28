@@ -2,7 +2,8 @@ User-agent: *
 Allow: /
 Allow: /styles/
 Allow: /scripts/
-Allow: /logo.jpg
+Allow: /src/
+Allow: /favicon.ico
 
 User-agent: Yandex
 Allow: /
