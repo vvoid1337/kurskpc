@@ -1,4 +1,4 @@
-/* KurskPC Lab — минимальный интерактив (мобильное меню, скролл, FAQ) */
+/* KurskPC — минимальный интерактив (мобильное меню, скролл, FAQ) */
 
 document.addEventListener("DOMContentLoaded", () => {
   const header = document.getElementById("header");
