@@ -9,4 +9,3 @@ User-agent: Yandex
 Allow: /
 
 Sitemap: https://kurskpc.ru/sitemap.xml
-Host: https://kurskpc.ru

@@ -3,8 +3,6 @@
    Clean White Base · Solid Lime & Sky Blue Accents · No Gradients · No Emojis
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap');
-
 :root {
   /* Solid Backgrounds */
   --bg-body: #f8fafc;
@@ -60,7 +58,11 @@
 
 /* ---- Reset ---- */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-html { scroll-behavior: smooth; font-size: 16px; }
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px;
+  font-size: 16px;
+}
 body {
   font-family: var(--font);
   background-color: var(--bg-body);
@@ -68,6 +70,13 @@ body {
   line-height: 1.6;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+}
+section, [id] {
+  scroll-margin-top: 80px;
+}
+:focus-visible {
+  outline: 2px solid var(--blue);
+  outline-offset: 2px;
 }
 img { max-width: 100%; height: auto; display: block; }
 a { color: inherit; text-decoration: none; }

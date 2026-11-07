@@ -18,11 +18,16 @@
   <!-- Верификация поисковых систем -->
   <meta name="yandex-verification" content="8c75ee6e68437301">
 
+  <!-- Предзагрузка шрифтов без блокирующего @import -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap" rel="stylesheet">
+
   <!-- Favicon и мобильные иконки -->
   <link rel="icon" href="src/favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="src/avatar.png">
   <link rel="apple-touch-icon" href="src/avatar.png">
-  <meta name="theme-color" content="#0f172a">
+  <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
   <!-- Open Graph / VK / Telegram -->
@@ -39,7 +44,7 @@
   <meta property="og:image:alt" content="KurskPC — Ремонт компьютеров и ноутбуков в Курске">
 
   <!-- Twitter Card -->
-  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:card" content="summary">
   <meta name="twitter:title" content="Ремонт компьютеров и ноутбуков в Курске — KurskPC">
   <meta name="twitter:description" content="Частный мастер по ремонту компьютеров, ноутбуков и консолей в Курске. Бесплатный выезд при заказе, открытый прайс-лист.">
   <meta name="twitter:image" content="https://kurskpc.ru/src/avatar.png">
@@ -80,7 +85,7 @@
         "paymentAccepted": "Cash, SBP",
         "openingHours": "Mo-Su 09:00-21:00",
         "sameAs": [
-          "https://vk.ru/kurskpclab",
+          "https://vk.com/kurskpclab",
           "https://t.me/kurskpc"
         ],
         "geo": {
@@ -248,7 +253,7 @@
             "name": "Сколько стоит выезд мастера?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "В пределах Курска — бесплатно при заказе работ. Отказ от ремонта после диагностики — 500 ₽. Дериглазова, Волокно — от 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽."
+              "text": "По основным районам Курска — бесплатно при заказе работ. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 500 ₽."
             }
           },
           {
@@ -261,10 +266,10 @@
           },
           {
             "@type": "Question",
-            "name": "Почему Honeywell PTM7950, а не обычная паста?",
+            "name": "Кому нужен Honeywell PTM7950, а кому хватит обычной термопасты?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "На открытых кристаллах CPU/GPU ноутбуков и консолей обычная паста вроде Arctic MX-4 выдавливается уже через пару месяцев из-за циклов нагрева (pump-out effect) и теряет свойства через 2 года. Фазовый переход PTM7950 физически лишён эффекта pump-out: он не вытекает, не сохнет и начинает незначительно терять свойства только через 5 лет активной эксплуатации."
+              "text": "Фазовый переход необходим на открытых кристаллах Direct-Die (ноутбуки, видеокарты, консоли PS/Xbox), подверженных эффекту выдавливания (pump-out). Для обычного процессора ПК с металлической крышкой (IHS) стандартного уровня достаточно качественной термопасты Arctic MX-4: я подбираю термоинтерфейс строго по целесообразности, чтобы вы не переплачивали за то, что вашей системе не требуется."
             }
           },
           {
@@ -294,7 +299,7 @@
 <!-- ======== Header ======== -->
 <header class="header" id="header">
   <div class="wrap wrap-full header-inner">
-    <a href="#" class="logo">
+    <a href="/" class="logo">
       <img src="src/avatar.png" alt="KurskPC — Ремонт компьютеров и ноутбуков в Курске" class="logo-icon" width="50" height="50" fetchpriority="high">
       <div class="logo-titles"><span class="logo-text">Kursk<span>PC</span></span><span class="logo-sub">Компьютерный мастер · Курск</span></div>
     </a>
@@ -309,14 +314,14 @@
 
     <div class="header-right">
       <span class="online-label"><span class="online-dot"></span> <span>На связи</span></span>
-      <a href="tel:+79996077365" class="header-phone">+7 (999) 607-73-65</a>
-      <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg btn-sm">Telegram</a>
-      <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk btn-sm">ВКонтакте</a>
-      <a href="tel:+79996077365" class="header-call-btn" aria-label="Позвонить мастеру">
+      <a href="tel:+79996077365" class="header-phone" data-ym-goal="click_phone">+7 (999) 607-73-65</a>
+      <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg btn-sm" data-ym-goal="click_tg">Telegram</a>
+      <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk btn-sm" data-ym-goal="click_vk">ВКонтакте</a>
+      <a href="tel:+79996077365" class="header-call-btn" aria-label="Позвонить мастеру" data-ym-goal="click_phone">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         <span>Позвонить</span>
       </a>
-      <button class="burger" id="burger" aria-label="Меню навигации" aria-expanded="false">
+      <button class="burger" id="burger" aria-label="Меню навигации" aria-expanded="false" aria-controls="nav">
         <span class="burger-line"></span>
         <span class="burger-line"></span>
       </button>
@@ -325,6 +330,7 @@
 </header>
 <div class="nav-backdrop" id="navBackdrop"></div>
 
+<main id="main">
 <!-- ======== Hero ======== -->
 <section class="hero" id="hero">
   <div class="wrap hero-grid">
@@ -337,7 +343,7 @@
           <span class="prop-icon">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
           </span>
-          <div><b>Выезд на дом — 0 ₽</b><span>По Курску при выполнении работ</span></div>
+          <div><b>Выезд на дом — 0 ₽</b><span>По основным районам при заказе</span></div>
         </div>
         <div class="prop">
           <span class="prop-icon">
@@ -360,15 +366,15 @@
       </div>
 
       <div class="hero-btns">
-        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg">
+        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg" data-ym-goal="click_tg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
           Telegram
         </a>
-        <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk">
+        <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk" data-ym-goal="click_vk">
           <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
           ВКонтакте
         </a>
-        <a href="tel:+79996077365" class="btn btn-outline">
+        <a href="tel:+79996077365" class="btn btn-outline" data-ym-goal="click_phone">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           +7 (999) 607-73-65
         </a>
@@ -399,7 +405,7 @@
         <div class="cmp-head"><div class="cmp-icon">✓</div><h3 class="cmp-h">KurskPC</h3></div>
         <ul class="cmp-list">
           <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Цена фиксируется до начала</b><p>По открытому прайс-листу. Не устроит — ничего не платите.</p></div></li>
-          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Оригинальные термоинтерфейсы</b><p>Honeywell PTM7950 и Arctic MX-4 с ресурсом работы до 5 лет.</p></div></li>
+          <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Разумный подбор под ваше железо</b><p>Honeywell PTM7950 — строго туда, где есть перегрев и открытый кристалл (ноутбуки, PS4/PS5, Xbox, горячие GPU). А для офисных ПК и CPU с крышкой — качественная термопаста без переплат.</p></div></li>
           <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Ремонт и проверка при вас</b><p>Оплата только после того, как вы лично проверите стабильность работы.</p></div></li>
         </ul>
       </div>
@@ -412,7 +418,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">Услуги и стоимость работ</h2>
-      <p class="section-sub">Все цены актуальны. Выезд по Курску бесплатный при заказе.</p>
+      <p class="section-sub">Все цены актуальны. Выезд по основным районам Курска бесплатный при заказе.</p>
     </div>
 
     <!-- 1. Чистка и охлаждение -->
@@ -697,7 +703,7 @@
   <div class="wrap">
     <div class="section-head">
       <h2 class="section-title">Термоинтерфейсы и расходные материалы</h2>
-      <p class="section-sub">Использую только оригинальные составы с подтвержденным теплоотводом и ресурсом работы.</p>
+      <p class="section-sub">Подбираю материалы строго под тепловую нагрузку и тип чипа — без навязывания лишних трат.</p>
     </div>
 
     <div class="mat-grid">
@@ -705,19 +711,19 @@
         <div class="mat-num">01</div>
         <h3 class="mat-h">Фазовый переход</h3>
         <span class="mat-brand">Honeywell PTM7950</span>
-        <p>Теплопроводность 8.5 Вт/м·К. Не подвержен эффекту выдавливания (pump-out effect). Не сохнет и не вытекает, начинает терять свойства только через 5 лет (тогда как обычная MX-4 деградирует уже через 2 года).</p>
+        <p>Для горячих чипов без крышки (Direct-Die): игровые ноутбуки, видеокарты с высоким TDP, консоли PS4/PS5 и Xbox. Защита от эффекта pump-out (выдавливания). Не высыхает и сохраняет свойства до 5 лет интенсивных нагрузок.</p>
       </div>
       <div class="mat-card">
         <div class="mat-num">02</div>
         <h3 class="mat-h">Термопаста CPU</h3>
-        <span class="mat-brand">Arctic MX-4 / GD900</span>
-        <p>Для процессоров с металлической крышкой (IHS). Заполняет микронеровности и держит эффективность до 2 лет, после чего требует планового обновления.</p>
+        <span class="mat-brand">Arctic MX-4 и проверенные составы</span>
+        <p>Для процессоров с металлической крышкой (IHS) и стандартных сборок. Надёжный теплоотвод на 2–3 года для холодного и умеренного железа без переплаты за избыточный в таких системах фазовый переход.</p>
       </div>
       <div class="mat-card">
         <div class="mat-num">03</div>
         <h3 class="mat-h">Термопрокладки VRM / VRAM</h3>
         <span class="mat-brand">Thermalright Odyssey / FEHONDA / LTP-15</span>
-        <p>12.8–15 Вт/м·К. Замер толщины штангенциркулем (0.5–2.0 мм) гарантирует правильный прижим чипов памяти.</p>
+        <p>12.8–15 Вт/м·К. Точный замер толщины штангенциркулем (0.5–2.0 мм) гарантирует правильный прижим чипов памяти без перекоса радиатора.</p>
       </div>
     </div>
   </div>
@@ -779,15 +785,15 @@
         <div class="m-stat"><strong>до 90 дней</strong><span>Гарантии</span></div>
       </div>
       <div class="hero-btns">
-        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg">
+        <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg" data-ym-goal="click_tg">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
           Telegram
         </a>
-        <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk">
+        <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk" data-ym-goal="click_vk">
           <svg width="18" height="18" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
           ВКонтакте
         </a>
-        <a href="tel:+79996077365" class="btn btn-outline">
+        <a href="tel:+79996077365" class="btn btn-outline" data-ym-goal="click_phone">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
           +7 (999) 607-73-65
         </a>
@@ -833,7 +839,7 @@
         </div>
         <p class="cov-desc">С чем чаще всего обращаются владельцы ПК, ноутбуков и игровых консолей:</p>
         <ul class="cov-list">
-          <li><strong>Перегрев, шум кулеров и выключения:</strong> Комплексная чистка от пыли компрессором, замена термопасты на Honeywell PTM7950 и замена термопрокладок</li>
+          <li><strong>Перегрев, шум кулеров и выключения:</strong> Комплексная чистка от пыли компрессором, нанесение термоинтерфейса под тип процессора и замена термопрокладок</li>
           <li><strong>Не включается, черный экран, нет сигнала:</strong> Аппаратная диагностика на месте, проверка блока питания, ОЗУ и цепей питания</li>
           <li><strong>Тормозит, зависает, медленно открывает файлы:</strong> Установка быстрого SSD NVMe/SATA вместо старого HDD с переносом ваших файлов и программ</li>
           <li><strong>Синий экран (BSOD), вирусы, реклама:</strong> Чистая установка официального дистрибутива Windows 10/11, настройка драйверов и оптимизация задержек</li>
@@ -855,15 +861,15 @@
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-q"><span>Сколько стоит выезд мастера?</span><span class="faq-chevron">▼</span></div>
-        <div class="faq-a">В пределах Курска — <strong>бесплатно</strong> при заказе работ. Отказ от ремонта после диагностики — 500 ₽. Дериглазова, Волокно — от 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽.</div>
+        <div class="faq-a">По основным районам Курска — <strong>бесплатно</strong> при заказе работ. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 500 ₽.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Можно наблюдать за процессом?</span><span class="faq-chevron">▼</span></div>
         <div class="faq-a">Да. Мастер работает при вас, показывает состояние пыли, заводской пасты и нанесение нового термоинтерфейса.</div>
       </div>
       <div class="faq-item">
-        <div class="faq-q"><span>Почему Honeywell PTM7950, а не обычная паста?</span><span class="faq-chevron">▼</span></div>
-        <div class="faq-a">На открытых кристаллах GPU и консолей обычная паста выдавливается за пару месяцев из-за температурного расширения (pump-out effect) и теряет свойства уже через 2 года. PTM7950 физически лишён эффекта pump-out: при 45°C материал размягчается, заполняя микрозазоры, не высыхает и начинает терять свойства только через 5 лет.</div>
+        <div class="faq-q"><span>Кому нужен Honeywell PTM7950, а кому хватит обычной пасты?</span><span class="faq-chevron">▼</span></div>
+        <div class="faq-a">Фазовый переход необходим на открытых кристаллах Direct-Die (ноутбуки, видеокарты, консоли PS/Xbox), где циклы нагрева выдавливают обычную пасту за пару месяцев (pump-out effect). Для обычного процессора ПК с металлической крышкой (IHS) стандартного уровня достаточно качественной термопасты Arctic MX-4: я подбираю термоинтерфейс строго по целесообразности, чтобы вы не переплачивали за то, что вашей системе не требуется.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Какая гарантия?</span><span class="faq-chevron">▼</span></div>
@@ -876,13 +882,14 @@
     </div>
   </div>
 </section>
+</main>
 
 <!-- ======== Footer / Contacts ======== -->
 <footer class="footer" id="contacts">
   <div class="wrap wrap-full">
     <div class="footer-grid">
       <div class="footer-brand">
-        <a href="#" class="logo">
+        <a href="/" class="logo">
           <img src="src/avatar.png" alt="KurskPC — Частный компьютерный мастер Курск" class="logo-icon" width="50" height="50" loading="lazy">
           <div class="logo-titles"><span class="logo-text">Kursk<span>PC</span></span><span class="logo-sub">Компьютерный мастер · Курск</span></div>
         </a>
@@ -919,7 +926,7 @@
         <h3>Связь с мастером</h3>
         <p class="footer-contacts-sub">Выберите удобный способ связи:</p>
         <div class="footer-contact-cards">
-          <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="footer-contact-link f-tg">
+          <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="footer-contact-link f-tg" data-ym-goal="click_tg">
             <div class="f-contact-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
             </div>
@@ -929,17 +936,17 @@
             </div>
           </a>
 
-          <a href="https://vk.ru/kurskpclab" target="_blank" rel="noopener" class="footer-contact-link f-vk">
+          <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="footer-contact-link f-vk" data-ym-goal="click_vk">
             <div class="f-contact-icon">
               <svg width="20" height="20" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
             </div>
             <div class="f-contact-meta">
               <span class="f-contact-name">ВКонтакте</span>
-              <span class="f-contact-handle">vk.ru/kurskpclab</span>
+              <span class="f-contact-handle">vk.com/kurskpclab</span>
             </div>
           </a>
 
-          <a href="tel:+79996077365" class="footer-contact-link f-phone">
+          <a href="tel:+79996077365" class="footer-contact-link f-phone" data-ym-goal="click_phone">
             <div class="f-contact-icon">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </div>
