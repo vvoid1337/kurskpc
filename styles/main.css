@@ -100,6 +100,8 @@
   --green: #16a34a;
   --green-light: #f0fdf4;
   --green-border: #bbf7d0;
+  --emerald: #047857;
+  --emerald-hover: #065f46;
 
   --red: #dc2626;
   --red-light: #fef2f2;
@@ -173,10 +175,14 @@ button { font-family: inherit; cursor: pointer; }
 .btn svg { flex-shrink: 0; }
 
 .btn-lime {
-  background: var(--lime); color: #0f172a;
-  font-weight: 700;
+  background: var(--emerald); color: #ffffff;
+  font-weight: 600;
 }
-.btn-lime:hover { background: var(--lime-hover); color: #0f172a; }
+.btn-lime:hover {
+  background: var(--emerald-hover);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
 
 .btn-outline {
   background: #ffffff; color: var(--text-bright);
