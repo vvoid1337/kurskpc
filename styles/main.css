@@ -84,11 +84,11 @@
   --text-bright: #0f172a;
 
   /* Solid Accent Colors */
-  --lime: #84cc16;
-  --lime-hover: #65a30d;
-  --lime-dark: #3f6212;
-  --lime-light: #f7fee7;
-  --lime-border: #d9f99d;
+  --lime: #047857;
+  --lime-hover: #065f46;
+  --lime-dark: #065f46;
+  --lime-light: #ecfdf5;
+  --lime-border: #a7f3d0;
 
   --blue: #0284c7;
   --blue-hover: #0369a1;
@@ -428,20 +428,20 @@ button { font-family: inherit; cursor: pointer; }
   display: grid; place-items: center; font-weight: 800; font-size: 1rem;
 }
 .cmp-bad .cmp-icon { background: #fee2e2; color: var(--red); }
-.cmp-good .cmp-icon { background: var(--lime); color: #0f172a; }
+.cmp-good .cmp-icon { background: var(--lime); color: #ffffff; }
 .cmp-h { font-size: 1.18rem; font-weight: 800; }
 .cmp-bad .cmp-h { color: #991b1b; }
-.cmp-good .cmp-h { color: #365314; }
+.cmp-good .cmp-h { color: #065f46; }
 .cmp-list { display: flex; flex-direction: column; gap: 16px; }
 .cmp-item { display: flex; gap: 10px; font-size: .92rem; line-height: 1.5; }
 .cmp-item b { display: block; margin-bottom: 2px; font-weight: 700; }
 .cmp-bad .cmp-item b { color: #991b1b; }
 .cmp-bad .cmp-item p { color: #7f1d1d; }
-.cmp-good .cmp-item b { color: #1e293b; }
-.cmp-good .cmp-item p { color: #3f6212; }
+.cmp-good .cmp-item b { color: #0f172a; }
+.cmp-good .cmp-item p { color: #047857; }
 .cmp-bullet { font-weight: 800; font-size: .95rem; flex-shrink: 0; }
 .cmp-bad .cmp-bullet { color: var(--red); }
-.cmp-good .cmp-bullet { color: var(--lime-dark); }
+.cmp-good .cmp-bullet { color: #047857; }
 
 /* ==== Price Cards ==== */
 .price-cat-title {
