@@ -54,9 +54,9 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 
-  // Сброс блокировки скролла при ресайзе выше 1220px
+  // Сброс блокировки скролла при ресайзе выше 1260px
   window.addEventListener("resize", () => {
-    if (window.innerWidth > 1220 && nav?.classList.contains("open")) {
+    if (window.innerWidth > 1260 && nav?.classList.contains("open")) {
       toggleMenu(false);
     }
   });
