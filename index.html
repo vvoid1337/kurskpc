@@ -17,16 +17,23 @@
 
   <!-- Верификация поисковых систем -->
   <meta name="yandex-verification" content="8c75ee6e68437301">
+  <!-- Раскомментируйте и вставьте код после добавления сайта в Google Search Console:
+  <meta name="google-site-verification" content="ВАШ_КОД_ИЗ_GSC"> -->
+
+  <!-- PWA & Web App Manifest -->
+  <link rel="manifest" href="manifest.json">
 
   <!-- Предзагрузка шрифтов без блокирующего @import -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap" rel="stylesheet">
 
-  <!-- Favicon и мобильные иконки -->
-  <link rel="icon" href="src/favicon.ico" sizes="any">
+  <!-- Favicon и мобильные иконки для поисковых сниппетов (Google / Yandex) -->
+  <link rel="icon" href="favicon.ico" sizes="any">
   <link rel="icon" type="image/png" sizes="32x32" href="src/avatar.png">
-  <link rel="apple-touch-icon" href="src/avatar.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="src/avatar.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="src/avatar.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/avatar.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
@@ -84,6 +91,20 @@
         "currenciesAccepted": "RUB",
         "paymentAccepted": "Cash, SBP",
         "openingHours": "Mo-Su 09:00-21:00",
+        "founder": {
+          "@type": "Person",
+          "name": "Алексей",
+          "jobTitle": "Частный компьютерный мастер",
+          "url": "https://kurskpc.ru/#about"
+        },
+        "knowsAbout": [
+          "Ремонт компьютеров Курск",
+          "Ремонт ноутбуков ASUS, Lenovo, Acer, HP, MSI, Dell",
+          "Чистка игровых ноутбуков с Honeywell PTM7950",
+          "Обслуживание и чистка PlayStation 4, PlayStation 5, Xbox Series X/S",
+          "Сборка компьютеров на заказ",
+          "Установка официальной Windows 10 и Windows 11"
+        ],
         "sameAs": [
           "https://vk.com/kurskpclab",
           "https://t.me/kurskpc"
@@ -289,6 +310,18 @@
             }
           }
         ]
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://kurskpc.ru/#breadcrumb",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Главная",
+            "item": "https://kurskpc.ru/"
+          }
+        ]
       }
     ]
   }
@@ -305,7 +338,8 @@
     </a>
 
     <nav class="nav" id="nav">
-      <a href="#services">Услуги и цены</a>
+      <a href="#calc">Калькулятор</a>
+      <a href="#services">Цены</a>
       <a href="#materials">Расходники</a>
       <a href="#coverage">Районы</a>
       <a href="#warranty">Гарантия</a>
@@ -313,10 +347,16 @@
     </nav>
 
     <div class="header-right">
-      <span class="online-label"><span class="online-dot"></span> <span>На связи</span></span>
+      <span class="online-label"><span class="online-dot"></span><span>На связи</span></span>
       <a href="tel:+79996077365" class="header-phone" data-ym-goal="click_phone">+7 (999) 607-73-65</a>
-      <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg btn-sm" data-ym-goal="click_tg">Telegram</a>
-      <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk btn-sm" data-ym-goal="click_vk">ВКонтакте</a>
+      <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="btn btn-tg btn-sm" data-ym-goal="click_tg" aria-label="Написать в Telegram">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
+        <span>Telegram</span>
+      </a>
+      <a href="https://vk.com/kurskpclab" target="_blank" rel="noopener" class="btn btn-vk btn-sm" data-ym-goal="click_vk" aria-label="Группа ВКонтакте">
+        <svg width="15" height="15" viewBox="0 0 576 512" fill="currentColor"><path d="M545 117.7c3.7-12.5 0-21.7-17.8-21.7h-58.9c-15 0-21.9 7.9-25.6 16.7 0 0-30 73.1-72.4 120.5-13.7 13.7-20 18.1-27.5 18.1-3.7 0-9.4-4.4-9.4-16.9V117.7c0-15-4.2-21.7-16.6-21.7h-92.6c-9.4 0-15 7-15 13.5 0 14.2 21.2 17.5 23.4 57.5v86.8c0 19-3.4 22.5-10.9 22.5-20 0-68.6-73.4-97.4-157.4-5.8-16.3-11.5-22.9-26.6-22.9H38.8c-16.8 0-20.2 7.9-20.2 16.7 0 15.6 20 93.1 93.1 195.5C160.4 378.1 229 416 291.4 416c37.5 0 42.1-8.4 42.1-22.9 0-66.8-3.4-73.1 15.4-73.1 8.7 0 23.7 4.4 58.7 38.1 40 40 46.6 57.9 69 57.9h58.9c16.8 0 25.3-8.4 20.4-25-11.2-34.9-86.9-106.7-90.3-111.5-8.7-11.2-6.2-16.2 0-26.2.1-.1 72-101.3 79.4-135.6z"/></svg>
+        <span>ВКонтакте</span>
+      </a>
       <a href="tel:+79996077365" class="header-call-btn" aria-label="Позвонить мастеру" data-ym-goal="click_phone">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         <span>Позвонить</span>
@@ -341,7 +381,7 @@
       <div class="props">
         <div class="prop">
           <span class="prop-icon">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="1" y="3" width="15" height="13"></rect><polygon points="16 8 20 8 23 11 23 16 16 16"></polygon><circle cx="5.5" cy="18.5" r="2.5"></circle><circle cx="18.5" cy="18.5" r="2.5"></circle></svg>
           </span>
           <div><b>Выезд на дом — 0 ₽</b><span>По основным районам при заказе</span></div>
         </div>
@@ -408,6 +448,63 @@
           <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Разумный подбор под ваше железо</b><p>Honeywell PTM7950 — строго туда, где есть перегрев и открытый кристалл (ноутбуки, PS4/PS5, Xbox, горячие GPU). А для офисных ПК и CPU с крышкой — качественная термопаста без переплат.</p></div></li>
           <li class="cmp-item"><span class="cmp-bullet">✓</span><div><b>Ремонт и проверка при вас</b><p>Оплата только после того, как вы лично проверите стабильность работы.</p></div></li>
         </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ======== Интерактивный калькулятор стоимости (SEO & UX) ======== -->
+<section class="section" id="calc">
+  <div class="wrap">
+    <div class="section-head">
+      <div class="section-tag">Мгновенный расчет</div>
+      <h2 class="section-title">Калькулятор стоимости ремонта в Курске</h2>
+      <p class="section-sub">Выберите тип устройства и неисправность, чтобы узнать честную фиксированную цену без навязанных услуг.</p>
+    </div>
+
+    <div class="calc-box">
+      <span class="calc-step-label">Шаг 1: Выберите устройство</span>
+      <div class="calc-devices" role="tablist">
+        <button type="button" class="calc-dev-btn active" data-device="pc" role="tab" aria-selected="true">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+          <span>Компьютер (ПК)</span>
+        </button>
+        <button type="button" class="calc-dev-btn" data-device="laptop" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="12" rx="2"></rect><path d="M2 20h20"></path></svg>
+          <span>Ноутбук</span>
+        </button>
+        <button type="button" class="calc-dev-btn" data-device="console" role="tab" aria-selected="false">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="6" width="20" height="12" rx="2"></rect><circle cx="6" cy="12" r="1.5"></circle><circle cx="18" cy="12" r="1.5"></circle><path d="M10 12h4"></path><path d="M12 10v4"></path></svg>
+          <span>PlayStation / Xbox</span>
+        </button>
+      </div>
+
+      <span class="calc-step-label">Шаг 2: Что беспокоит или требуется сделать?</span>
+      <div class="calc-problems" id="calcProblems" role="group">
+        <!-- Кнопки неисправностей формируются скриптом main.js -->
+      </div>
+
+      <div class="calc-summary">
+        <div class="calc-sum-price-wrap">
+          <span class="calc-sum-tag">Фиксированная стоимость:</span>
+          <div class="calc-sum-price" id="calcPrice">1 000 – 1 300 ₽</div>
+        </div>
+        <div class="calc-sum-specs">
+          <div>Время: <strong id="calcTime">40–60 минут</strong></div>
+          <div>Материалы: <strong id="calcMats">Arctic MX-4 включена, тест в OCCT</strong></div>
+          <div>Гарантия: <strong id="calcWarranty">30 дней</strong></div>
+        </div>
+      </div>
+
+      <div class="calc-cta">
+        <a href="https://t.me/kurskpc" id="calcTgBtn" target="_blank" rel="noopener" class="btn btn-tg" data-ym-goal="click_tg">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.665 3.717l-17.73 6.837c-1.21.486-1.203 1.161-.222 1.462l4.552 1.42 10.532-6.645c.498-.303.953-.14.579.192l-8.533 7.701h-.002l-.313 4.674c.458 0 .66-.21.916-.458l2.199-2.138 4.573 3.378c.843.464 1.448.225 1.658-.783l2.998-14.127c.308-1.233-.472-1.794-1.207-1.491z"/></svg>
+          Зафиксировать цену в Telegram
+        </a>
+        <a href="tel:+79996077365" class="btn btn-outline" data-ym-goal="click_phone">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+          +7 (999) 607-73-65
+        </a>
       </div>
     </div>
   </div>
@@ -695,6 +792,26 @@
         <dl class="pc-meta"><dt>Время</dt><dd>20–40 мин</dd><dt>Материалы</dt><dd>По факту</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
     </div>
+
+    <!-- Обслуживаемые бренды и компонентный ремонт (SEO LSI) -->
+    <div class="brands-wrap">
+      <div class="brands-title">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="3" width="20" height="14" rx="2"></rect><line x1="8" y1="21" x2="16" y2="21"></line><line x1="12" y1="17" x2="12" y2="21"></line></svg>
+        <span>Обслуживаемые бренды ноутбуков и ПК в Курске:</span>
+      </div>
+      <div class="brands-chips">
+        <span class="brand-chip">ASUS (ROG / TUF / ZenBook)</span>
+        <span class="brand-chip">Lenovo (Legion / IdeaPad / ThinkPad)</span>
+        <span class="brand-chip">Acer (Nitro / Predator / Aspire)</span>
+        <span class="brand-chip">HP (Victus / Omen / Pavilion)</span>
+        <span class="brand-chip">MSI (Katana / Bravo / Stealth / Raider)</span>
+        <span class="brand-chip">Dell (Alienware / Inspiron / G-серия)</span>
+        <span class="brand-chip">Huawei / Honor (MateBook / MagicBook)</span>
+        <span class="brand-chip">Thunderobot / Machenike / Clevo</span>
+        <span class="brand-chip">DNS DEXP / Ardor Gaming</span>
+        <span class="brand-chip">Gigabyte / Aorus</span>
+      </div>
+    </div>
   </div>
 </section>
 
@@ -910,8 +1027,9 @@
       </div>
 
       <div>
-        <h3>Навигация</h3>
+        <div class="footer-title">Навигация</div>
         <div class="footer-links">
+          <a href="#calc">Калькулятор стоимости</a>
           <a href="#services">Прайс-лист</a>
           <a href="#consoles">PlayStation & Xbox</a>
           <a href="#tuning">Оптимизация и разгон</a>
@@ -923,7 +1041,7 @@
       </div>
 
       <div>
-        <h3>Связь с мастером</h3>
+        <div class="footer-title">Связь с мастером</div>
         <p class="footer-contacts-sub">Выберите удобный способ связи:</p>
         <div class="footer-contact-cards">
           <a href="https://t.me/kurskpc" target="_blank" rel="noopener" class="footer-contact-link f-tg" data-ym-goal="click_tg">
