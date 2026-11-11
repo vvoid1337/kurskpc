@@ -2,6 +2,7 @@ User-agent: *
 Allow: /
 Allow: /styles/
 Allow: /scripts/
+Allow: /fonts/
 Allow: /src/
 Allow: /favicon.ico
 

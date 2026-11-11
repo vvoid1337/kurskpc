@@ -21,19 +21,16 @@
   <meta name="google-site-verification" content="ВАШ_КОД_ИЗ_GSC"> -->
 
   <!-- PWA & Web App Manifest -->
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="/manifest.json">
 
-  <!-- Предзагрузка шрифтов без блокирующего @import -->
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@500;600&display=swap" rel="stylesheet">
+  <!-- Шрифты Inter и Fira Code подключены локально в styles/main.css -->
 
   <!-- Favicon и мобильные иконки для поисковых сниппетов (Google / Yandex) -->
-  <link rel="icon" href="favicon.ico" sizes="any">
-  <link rel="icon" type="image/png" sizes="32x32" href="src/avatar.png">
-  <link rel="icon" type="image/png" sizes="192x192" href="src/avatar.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="src/avatar.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="src/avatar.png">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="icon" type="image/png" sizes="32x32" href="/src/avatar.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="/src/avatar.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/src/avatar.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/src/avatar.png">
   <meta name="theme-color" content="#ffffff">
   <meta name="format-detection" content="telephone=no">
 
@@ -56,21 +53,9 @@
   <meta name="twitter:description" content="Частный мастер по ремонту компьютеров, ноутбуков и консолей в Курске. Бесплатный выезд при заказе, открытый прайс-лист.">
   <meta name="twitter:image" content="https://kurskpc.ru/src/avatar.png">
 
-  <link rel="stylesheet" href="styles/main.css">
+  <link rel="stylesheet" href="/styles/main.css">
 
-  <!-- Yandex.Metrika counter -->
-  <script type="text/javascript">
-      (function(m,e,t,r,i,k,a){
-          m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-          m[i].l=1*new Date();
-          for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-          k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-      })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=114042643', 'ym');
-
-      ym(114042643, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-  </script>
-  <noscript><div><img src="https://mc.yandex.ru/watch/114042643" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-  <!-- /Yandex.Metrika counter -->
+  <!-- Яндекс.Метрика загружается динамически в scripts/main.js только после согласия пользователя -->
 
   <!-- Микроразметка Schema.org для локального бизнеса и FAQ -->
   <script type="application/ld+json">
@@ -86,7 +71,7 @@
         "url": "https://kurskpc.ru/",
         "logo": "https://kurskpc.ru/src/avatar.png",
         "image": "https://kurskpc.ru/src/avatar.png",
-        "priceRange": "200–2400 ₽",
+        "priceRange": "700–5000 ₽",
         "telephone": "+7-999-607-73-65",
         "currenciesAccepted": "RUB",
         "paymentAccepted": "Cash, SBP",
@@ -140,28 +125,28 @@
                 {
                   "@type": "Offer",
                   "name": "Комплексная чистка ПК от пыли с заменой термопасты",
-                  "price": "1000",
+                  "price": "1500",
                   "priceCurrency": "RUB",
                   "description": "Полная продувка компрессором, замена термопасты на CPU, кабель-менеджмент, стресс-тест в OCCT."
                 },
                 {
                   "@type": "Offer",
                   "name": "Чистка стандартного ноутбука с заменой термоинтерфейса",
-                  "price": "1200",
+                  "price": "1600",
                   "priceCurrency": "RUB",
                   "description": "Разборка корпуса, чистка радиатора и кулера, замена термоинтерфейса CPU/GPU на Honeywell PTM7950."
                 },
                 {
                   "@type": "Offer",
                   "name": "Чистка игрового ноутбука с термоинтерфейсом Honeywell PTM7950",
-                  "price": "1500",
+                  "price": "2500",
                   "priceCurrency": "RUB",
                   "description": "Очистка двухконтурной СО, спаренных турбин, нанесение PTM7950, ревизия жидких термопрокладок VRM."
                 },
                 {
                   "@type": "Offer",
                   "name": "Обслуживание видеокарты (GPU)",
-                  "price": "1000",
+                  "price": "1500",
                   "priceCurrency": "RUB",
                   "description": "Очистка радиатора, замена термопасты чипа, замена термопрокладок VRAM/VRM."
                 }
@@ -174,35 +159,35 @@
                 {
                   "@type": "Offer",
                   "name": "Полное ТО PlayStation 4 (Fat/Slim/Pro)",
-                  "price": "1100",
+                  "price": "1800",
                   "priceCurrency": "RUB",
                   "description": "Разборка, продувка радиатора, нанесение Honeywell PTM7950 (фазовый переход) на APU, замена термопрокладок."
                 },
                 {
                   "@type": "Offer",
                   "name": "Чистка и замена термопасты Xbox One / Series S",
-                  "price": "1100",
+                  "price": "1800",
                   "priceCurrency": "RUB",
                   "description": "Разборка корпуса, продувка радиатора, замена заводской пасты на APU на Honeywell PTM7950."
                 },
                 {
                   "@type": "Offer",
                   "name": "Полное ТО Xbox Series X",
-                  "price": "2000",
+                  "price": "2500",
                   "priceCurrency": "RUB",
                   "description": "Послойная разборка башни, чистка испарительной камеры и вентилятора, замена термоинтерфейса."
                 },
                 {
                   "@type": "Offer",
                   "name": "Профилактика PlayStation 5",
-                  "price": "500",
+                  "price": "1000",
                   "priceCurrency": "RUB",
                   "description": "Демонтаж панелей и кулера, очистка пылеуловителей и продувка радиатора без разгерметизации жидкого металла."
                 },
                 {
                   "@type": "Offer",
                   "name": "Прошивка / активация HEN (PS4 / PS5)",
-                  "price": "900",
+                  "price": "1200",
                   "priceCurrency": "RUB",
                   "description": "Настройка HEN / GoldHEN для запуска игр, настройка хоста и подробный инструктаж."
                 }
@@ -215,21 +200,21 @@
                 {
                   "@type": "Offer",
                   "name": "Установка Windows 10/11 с драйверами и настройкой",
-                  "price": "900",
+                  "price": "1400",
                   "priceCurrency": "RUB",
                   "description": "Установка ОС со всеми драйверами, пакетом программ, без скрытых наценок за каждый драйвер."
                 },
                 {
                   "@type": "Offer",
                   "name": "Комплекс «Второе дыхание» (SSD + Windows)",
-                  "price": "1500",
+                  "price": "2200",
                   "priceCurrency": "RUB",
                   "description": "Монтаж SSD, чистая установка Windows, перенос пользовательских файлов со старого HDD."
                 },
                 {
                   "@type": "Offer",
                   "name": "Удаление вирусов, майнеров и рекламы",
-                  "price": "500",
+                  "price": "1000",
                   "priceCurrency": "RUB",
                   "description": "Очистка системы от скрытых служб, вирусов, майнеров и рекламных баннеров."
                 }
@@ -242,21 +227,21 @@
                 {
                   "@type": "Offer",
                   "name": "Сборка ПК на заказ в Курске",
-                  "price": "2400",
+                  "price": "3500",
                   "priceCurrency": "RUB",
                   "description": "Аккуратная сборка, кабель-менеджмент, настройка BIOS, установка Windows и стресс-тесты."
                 },
                 {
                   "@type": "Offer",
-                  "name": "Разгон и тонкая настройка железа (DRAM + CPU Curve)",
-                  "price": "2000",
+                  "name": "Ручная настройка таймингов DRAM и Curve Optimizer",
+                  "price": "3000",
                   "priceCurrency": "RUB",
-                  "description": "Тайминги памяти DRAM, Curve Optimizer, стресс-тесты стабильности системы."
+                  "description": "Полноценный ручной оверклокинг: первичные, вторичные и третичные тайминги DRAM, напряжения контроллера памяти (IMC/SoC), тонкая настройка Curve Optimizer по ядрам и стресс-тесты TestMem5/OCCT."
                 },
                 {
                   "@type": "Offer",
                   "name": "Андервольтинг видеокарты / процессора",
-                  "price": "1000",
+                  "price": "1500",
                   "priceCurrency": "RUB",
                   "description": "Снижение рабочих температур и шума вентиляторов без потери производительности."
                 }
@@ -274,7 +259,7 @@
             "name": "Сколько стоит выезд мастера?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "По основным районам Курска — бесплатно при заказе работ. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 500 ₽."
+              "text": "По основным районам Курска — бесплатно при заказе работ от 1 000 ₽. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 800 ₽."
             }
           },
           {
@@ -333,17 +318,17 @@
 <header class="header" id="header">
   <div class="wrap wrap-full header-inner">
     <a href="/" class="logo">
-      <img src="src/avatar.png" alt="KurskPC — Ремонт компьютеров и ноутбуков в Курске" class="logo-icon" width="50" height="50" fetchpriority="high">
+      <img src="/src/avatar.png" alt="KurskPC — Ремонт компьютеров и ноутбуков в Курске" class="logo-icon" width="50" height="50" fetchpriority="high">
       <div class="logo-titles"><span class="logo-text">Kursk<span>PC</span></span><span class="logo-sub">Компьютерный мастер · Курск</span></div>
     </a>
 
     <nav class="nav" id="nav">
-      <a href="#calc">Калькулятор</a>
-      <a href="#services">Цены</a>
-      <a href="#materials">Расходники</a>
-      <a href="#coverage">Районы</a>
-      <a href="#warranty">Гарантия</a>
-      <a href="#contacts">Контакты</a>
+      <a href="/remont-pk/">Ремонт ПК</a>
+      <a href="/remont-noutbukov/">Ноутбуки</a>
+      <a href="/remont-konsoley/">Консоли</a>
+      <a href="/ustanovka-windows/">Windows</a>
+      <a href="/sborka-pk/">Сборка ПК</a>
+      <a href="/#calc">Калькулятор</a>
     </nav>
 
     <div class="header-right">
@@ -487,7 +472,7 @@
       <div class="calc-summary">
         <div class="calc-sum-price-wrap">
           <span class="calc-sum-tag">Фиксированная стоимость:</span>
-          <div class="calc-sum-price" id="calcPrice">1 000 – 1 300 ₽</div>
+          <div class="calc-sum-price" id="calcPrice">1 500 – 1 800 ₽</div>
         </div>
         <div class="calc-sum-specs">
           <div>Время: <strong id="calcTime">40–60 минут</strong></div>
@@ -510,23 +495,77 @@
   </div>
 </section>
 
-<!-- ======== Прайс-лист ======== -->
+<!-- ======== Прайс-лист и направления ======== -->
 <section class="section" id="services">
   <div class="wrap">
     <div class="section-head">
+      <div class="section-tag">Специализация и прайс</div>
       <h2 class="section-title">Услуги и стоимость работ</h2>
-      <p class="section-sub">Все цены актуальны. Выезд по основным районам Курска бесплатный при заказе.</p>
+      <p class="section-sub">Все цены актуальны. Выезд по основным районам Курска бесплатный при заказе от 1 000 ₽. Выберите направление для подробного описания:</p>
+    </div>
+
+    <div class="hub-grid">
+      <a href="/remont-pk/" class="hub-card">
+        <div class="hub-card-top">
+          <h3 class="hub-card-title">Ремонт и чистка ПК</h3>
+          <span class="hub-card-price">от 1 500 ₽</span>
+        </div>
+        <p class="hub-card-desc">Продувка компрессором, замена термопасты CPU, обслуживание видеокарт (GPU), диагностика и модульная замена.</p>
+        <span class="hub-card-link">Подробнее об услуге →</span>
+      </a>
+
+      <a href="/remont-noutbukov/" class="hub-card">
+        <div class="hub-card-top">
+          <h3 class="hub-card-title">Чистка и ремонт ноутбуков</h3>
+          <span class="hub-card-price">от 1 600 ₽</span>
+        </div>
+        <p class="hub-card-desc">Чистка стандартных и игровых ноутбуков, фазовый переход Honeywell PTM7950, ревизия прокладок VRM и замена кулеров.</p>
+        <span class="hub-card-link">Подробнее об услуге →</span>
+      </a>
+
+      <a href="/remont-konsoley/" class="hub-card">
+        <div class="hub-card-top">
+          <h3 class="hub-card-title">PlayStation и Xbox</h3>
+          <span class="hub-card-price">от 1 000 ₽</span>
+        </div>
+        <p class="hub-card-desc">Полное ТО PS4, профилактика PS5, обслуживание Xbox Series S/X, установка SSD, настройка HEN / GoldHEN.</p>
+        <span class="hub-card-link">Подробнее об услуге →</span>
+      </a>
+
+      <a href="/ustanovka-windows/" class="hub-card">
+        <div class="hub-card-top">
+          <h3 class="hub-card-title">Установка Windows и ПО</h3>
+          <span class="hub-card-price">от 1 000 ₽</span>
+        </div>
+        <p class="hub-card-desc">Windows 10/11 со всеми драйверами, комплекс «Второе дыхание» (SSD + ОС), удаление вирусов и майнеров.</p>
+        <span class="hub-card-link">Подробнее об услуге →</span>
+      </a>
+
+      <a href="/sborka-pk/" class="hub-card">
+        <div class="hub-card-top">
+          <h3 class="hub-card-title">Сборка ПК и разгон</h3>
+          <span class="hub-card-price">от 1 500 ₽</span>
+        </div>
+        <p class="hub-card-desc">Подбор деталей под бюджет, сборка с кабель-менеджментом, андервольтинг GPU/CPU, разгон DRAM и Curve Optimizer.</p>
+        <span class="hub-card-link">Подробнее об услуге →</span>
+      </a>
     </div>
 
     <!-- 1. Чистка и охлаждение -->
-    <h3 class="price-cat-title">Профилактика, чистка и охлаждение</h3>
+    <div class="price-cat-head">
+      <h3 class="price-cat-title">Профилактика, чистка и охлаждение</h3>
+      <div class="price-cat-links">
+        <a href="/remont-pk/" class="price-cat-more">Компьютеры →</a>
+        <a href="/remont-noutbukov/" class="price-cat-more">Ноутбуки →</a>
+      </div>
+    </div>
     <div class="price-grid">
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Комплексная чистка ПК</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 000 – 1 300 ₽</div>
+            <div class="pc-price">1 500 – 1 800 ₽</div>
             <span class="pc-badge">Популярно</span>
           </div>
         </div>
@@ -538,57 +577,60 @@
         <div class="pc-header">
           <h4 class="pc-name">Чистка стандартного ноутбука</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 200 – 1 600 ₽</div>
+            <div class="pc-price">1 600 – 2 200 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Разборка корпуса, удаление пылевого войлока с радиатора, чистка вентилятора, замена термоинтерфейса CPU/GPU.</p>
-        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>PTM7950</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
+        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>PTM7950 вкл.</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Чистка игрового ноутбука</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 500 – 2 000 ₽</div>
+            <div class="pc-price">2 500 – 3 500 ₽</div>
             <span class="pc-badge">Игровые ноутбуки</span>
           </div>
         </div>
         <p class="pc-desc">Разборка двухконтурной СО, очистка спаренных турбин, Honeywell PTM7950 с высоким прижимом, ревизия термопрокладок VRM.</p>
-        <dl class="pc-meta"><dt>Время</dt><dd>1.5–2 часа</dd><dt>Материалы</dt><dd>PTM7950</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
+        <dl class="pc-meta"><dt>Время</dt><dd>1.5–2 часа</dd><dt>Материалы</dt><dd>PTM7950 вкл.</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Обслуживание видеокарты (GPU)</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 000 – 1 500 ₽</div>
+            <div class="pc-price">1 500 – 2 500 ₽</div>
           </div>
         </div>
-        <p class="pc-desc">Разборка СО, очистка радиатора, замена термопасты на чипе, замер и замена потёкших прокладок VRAM/VRM.</p>
-        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>Прокладки по прайсу</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
+        <p class="pc-desc">Разборка СО, очистка радиатора, замена термопасты на чипе (или PTM7950), замер и замена потёкших прокладок VRAM/VRM.</p>
+        <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>Прокладки отдельно</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Замена / смазка кулеров</h4>
           <div class="pc-price-row">
-            <div class="pc-price">400 ₽</div>
+            <div class="pc-price">700 ₽</div>
           </div>
         </div>
-        <p class="pc-desc">Демонтаж шумящего вентилятора, разборка, смазка подшипника синтетическим маслом или установка нового.</p>
+        <p class="pc-desc">Демонтаж шумящего вентилятора, разборка, смазка подшипника синтетическим маслом или установка нового (при чистке — 400 ₽).</p>
         <dl class="pc-meta"><dt>Время</dt><dd>20–30 мин</dd><dt>Материалы</dt><dd>Смазка вкл.</dd><dt>Гарантия</dt><dd>14 дней</dd></dl>
       </article>
     </div>
 
     <!-- 2. Консоли -->
-    <h3 class="price-cat-title" id="consoles">Игровые консоли (PlayStation & Xbox)</h3>
+    <div class="price-cat-head" id="consoles">
+      <h3 class="price-cat-title">Игровые консоли (PlayStation & Xbox)</h3>
+      <a href="/remont-konsoley/" class="price-cat-more">Подробнее о консолях →</a>
+    </div>
     <div class="price-grid">
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Полное ТО PlayStation 4 (Fat/Slim/Pro)</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 100 – 1 400 ₽</div>
+            <div class="pc-price">1 800 – 2 400 ₽</div>
             <span class="pc-badge">Популярно</span>
           </div>
         </div>
@@ -600,10 +642,10 @@
         <div class="pc-header">
           <h4 class="pc-name">Чистка Xbox One (S/X) / Series S</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 100 – 1 400 ₽</div>
+            <div class="pc-price">1 800 – 2 400 ₽</div>
           </div>
         </div>
-        <p class="pc-desc">Разборка корпуса, продувка радиатора, замена высохшей заводской пасты на APU, чистка турбины.</p>
+        <p class="pc-desc">Разборка корпуса, продувка радиатора, замена высохшей заводской пасты на APU на PTM7950, чистка турбины.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>1–1.5 часа</dd><dt>Материалы</dt><dd>Honeywell вкл.</dd><dt>Гарантия</dt><dd>60 дней</dd></dl>
       </article>
 
@@ -611,7 +653,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Полное ТО Xbox Series X</h4>
           <div class="pc-price-row">
-            <div class="pc-price">2 000 ₽</div>
+            <div class="pc-price">2 500 – 3 000 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Послойная разборка двухплатной башни, чистка испарительной камеры и вентилятора, замена термоинтерфейса.</p>
@@ -622,7 +664,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Профилактика PlayStation 5</h4>
           <div class="pc-price-row">
-            <div class="pc-price">500 ₽</div>
+            <div class="pc-price">1 000 – 1 200 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Снятие боковых панелей, демонтаж крыльчатки, чистка пылеуловителей и продувка радиатора (без разгерметизации ЖМ).</p>
@@ -633,7 +675,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Замена накопителя PS4 / Xbox на SSD</h4>
           <div class="pc-price-row">
-            <div class="pc-price">900 ₽</div>
+            <div class="pc-price">1 200 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Физическая замена диска 2.5", инициализация системы, установка последней прошивки через Recovery.</p>
@@ -644,7 +686,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Прошивка / активация HEN (PS4 / PS5)</h4>
           <div class="pc-price-row">
-            <div class="pc-price">900 ₽</div>
+            <div class="pc-price">1 200 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Установка и настройка HEN / GoldHEN для запуска игр и приложений с внешнего накопителя. Только при подходящей версии прошивки консоли. Настройка хоста и подробный инструктаж.</p>
@@ -653,14 +695,17 @@
     </div>
 
     <!-- 3. Софт и Windows -->
-    <h3 class="price-cat-title">Программное обеспечение, Windows и данные</h3>
+    <div class="price-cat-head">
+      <h3 class="price-cat-title">Программное обеспечение, Windows и данные</h3>
+      <a href="/ustanovka-windows/" class="price-cat-more">Подробнее о Windows →</a>
+    </div>
     <div class="price-grid">
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Установка Windows 10/11 с драйверами</h4>
           <div class="pc-price-row">
-            <div class="pc-price">900 ₽</div>
+            <div class="pc-price">1 400 ₽</div>
             <span class="pc-badge">Без скрытых доплат</span>
           </div>
         </div>
@@ -672,7 +717,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Комплекс «Второе дыхание» (SSD + Windows)</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 500 ₽</div>
+            <div class="pc-price">2 200 ₽</div>
             <span class="pc-badge">Комплекс</span>
           </div>
         </div>
@@ -684,7 +729,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Удаление вирусов, майнеров и рекламы</h4>
           <div class="pc-price-row">
-            <div class="pc-price">500 ₽</div>
+            <div class="pc-price">1 000 – 1 500 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Удаление скрытых служб, майнеров и троянов, очистка автозагрузки и системных веток реестра.</p>
@@ -695,7 +740,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Перенос данных и резервное копирование</h4>
           <div class="pc-price-row">
-            <div class="pc-price">600 ₽</div>
+            <div class="pc-price">1 000 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Полный перенос файлов, закладок, профилей программ на новый накопитель или ПК.</p>
@@ -706,23 +751,26 @@
         <div class="pc-header">
           <h4 class="pc-name">Настройка Wi-Fi роутера / принтера</h4>
           <div class="pc-price-row">
-            <div class="pc-price">300 ₽</div>
+            <div class="pc-price">700 ₽</div>
           </div>
         </div>
-        <p class="pc-desc">Настройка WPA3 шифрования, свободных каналов, подключение устройств и сетевой печати.</p>
+        <p class="pc-desc">Настройка WPA3-шифрования, свободных каналов, подключение устройств и сетевой печати (в комплексе — 400 ₽).</p>
         <dl class="pc-meta"><dt>Время</dt><dd>30–50 мин</dd><dt>Материалы</dt><dd>Не требуются</dd><dt>Гарантия</dt><dd>30 дней</dd></dl>
       </article>
     </div>
 
     <!-- 4. Оптимизация и разгон -->
-    <h3 class="price-cat-title" id="tuning">Оптимизация производительности и разгон</h3>
+    <div class="price-cat-head" id="tuning">
+      <h3 class="price-cat-title">Оптимизация производительности и разгон</h3>
+      <a href="/sborka-pk/#tuning" class="price-cat-more">Подробнее о тюнинге →</a>
+    </div>
     <div class="price-grid">
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Оптимизация Windows и снижение задержек</h4>
           <div class="pc-price-row">
-            <div class="pc-price">900 ₽</div>
+            <div class="pc-price">1 400 ₽</div>
             <span class="pc-badge">Для игр и работы</span>
           </div>
         </div>
@@ -732,13 +780,13 @@
 
       <article class="price-card">
         <div class="pc-header">
-          <h4 class="pc-name">Разгон железа (DRAM + Curve Optimizer)</h4>
+          <h4 class="pc-name">Ручной тюнинг памяти (DRAM) и Curve Optimizer</h4>
           <div class="pc-price-row">
-            <div class="pc-price">2 000 ₽</div>
-            <span class="pc-badge">Максимум FPS</span>
+            <div class="pc-price">3 000 – 4 500 ₽</div>
+            <span class="pc-badge">Плавный 1% Low FPS</span>
           </div>
         </div>
-        <p class="pc-desc">Включение XMP/EXPO, подтяжка таймингов DRAM (tRFC, tFAW, tREFI), настройка CPU Curve Optimizer, стресс-тест.</p>
+        <p class="pc-desc">Глубокая ручная настройка первичных, вторичных и третичных таймингов DRAM (tRFC, tFAW, tREFI и др.), подбор безопасных напряжений IMC/SoC/VDD, поиск стабильного Curve Optimizer по ядрам CPU. Полное тестирование в TestMem5 (anta777/1usmus) и OCCT без WHEA-ошибок.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>2–3 часа</dd><dt>Материалы</dt><dd>Не требуются</dd><dt>Гарантия</dt><dd>Стабильность</dd></dl>
       </article>
 
@@ -746,7 +794,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Андервольтинг GPU / CPU</h4>
           <div class="pc-price-row">
-            <div class="pc-price">1 000 ₽</div>
+            <div class="pc-price">1 500 – 2 000 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Построение кривой частот/напряжений в MSI Afterburner, снижение температур на 7–15°C без потери производительности.</p>
@@ -755,14 +803,17 @@
     </div>
 
     <!-- 5. Сборка -->
-    <h3 class="price-cat-title">Сборка ПК, апгрейд и подбор деталей</h3>
+    <div class="price-cat-head">
+      <h3 class="price-cat-title">Сборка ПК, апгрейд и подбор деталей</h3>
+      <a href="/sborka-pk/" class="price-cat-more">Подробнее о сборке →</a>
+    </div>
     <div class="price-grid">
 
       <article class="price-card">
         <div class="pc-header">
           <h4 class="pc-name">Подбор комплектующих под вашу сумму</h4>
           <div class="pc-price-row">
-            <div class="pc-price">600 ₽</div>
+            <div class="pc-price">1 000 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Подбор сбалансированной связки CPU, GPU и БП без переплат за маркетинг, проверка совместимости, прямые ссылки на магазины.</p>
@@ -773,11 +824,11 @@
         <div class="pc-header">
           <h4 class="pc-name">Сборка компьютера на заказ</h4>
           <div class="pc-price-row">
-            <div class="pc-price">2 400 ₽</div>
+            <div class="pc-price">3 500 – 5 000 ₽</div>
             <span class="pc-badge">Сборка и настройка</span>
           </div>
         </div>
-        <p class="pc-desc">Монтаж всех компонентов, аккуратный скрытый кабель-менеджмент, обновление BIOS, XMP, установка ОС и стресс-тест.</p>
+        <p class="pc-desc">Монтаж всех компонентов, аккуратный скрытый кабель-менеджмент, обновление BIOS, XMP, установка ОС и стресс-тест в OCCT.</p>
         <dl class="pc-meta"><dt>Время</dt><dd>2.5–3.5 часа</dd><dt>Материалы</dt><dd>Термопаста вкл.</dd><dt>Гарантия</dt><dd>60 дней</dd></dl>
       </article>
 
@@ -785,7 +836,7 @@
         <div class="pc-header">
           <h4 class="pc-name">Замена комплектующих (модульная)</h4>
           <div class="pc-price-row">
-            <div class="pc-price">200–500 ₽</div>
+            <div class="pc-price">500 – 1 000 ₽</div>
           </div>
         </div>
         <p class="pc-desc">Замена БП, кулера, видеокарты, установка дополнительных планок ОЗУ или M.2 NVMe.</p>
@@ -884,7 +935,7 @@
   <div class="wrap master-grid">
     <div class="master-card-badge">
       <div class="master-avatar">
-        <img src="src/avatar.png" alt="Мастер Алексей — KurskPC" class="master-avatar-img" width="88" height="88" loading="lazy">
+        <img src="/src/avatar.png" alt="Мастер Алексей — KurskPC" class="master-avatar-img" width="88" height="88" loading="lazy">
       </div>
       <div class="master-name-text">Алексей</div>
       <div class="master-role-text">Частный компьютерный мастер</div>
@@ -978,7 +1029,7 @@
     <div class="faq-list">
       <div class="faq-item open">
         <div class="faq-q"><span>Сколько стоит выезд мастера?</span><span class="faq-chevron">▼</span></div>
-        <div class="faq-a">По основным районам Курска — <strong>бесплатно</strong> при заказе работ. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 500 ₽.</div>
+        <div class="faq-a">По основным районам Курска — <strong>бесплатно</strong> при заказе работ от 1 000 ₽. Отдалённые микрорайоны (проспект Дериглазова, пос. Волокно) — 200 ₽, пригород (Прямицыно, Моква) — от 400 ₽. Диагностика при отказе от ремонта — 800 ₽.</div>
       </div>
       <div class="faq-item">
         <div class="faq-q"><span>Можно наблюдать за процессом?</span><span class="faq-chevron">▼</span></div>
@@ -1007,7 +1058,7 @@
     <div class="footer-grid">
       <div class="footer-brand">
         <a href="/" class="logo">
-          <img src="src/avatar.png" alt="KurskPC — Частный компьютерный мастер Курск" class="logo-icon" width="50" height="50" loading="lazy">
+          <img src="/src/avatar.png" alt="KurskPC — Частный компьютерный мастер Курск" class="logo-icon" width="50" height="50" loading="lazy">
           <div class="logo-titles"><span class="logo-text">Kursk<span>PC</span></span><span class="logo-sub">Компьютерный мастер · Курск</span></div>
         </a>
         <p>Ремонт и обслуживание компьютеров в Курске. Фиксация цены до начала работ, оплата по результату.</p>
@@ -1027,16 +1078,16 @@
       </div>
 
       <div>
-        <div class="footer-title">Навигация</div>
+        <div class="footer-title">Услуги и разделы</div>
         <div class="footer-links">
-          <a href="#calc">Калькулятор стоимости</a>
-          <a href="#services">Прайс-лист</a>
-          <a href="#consoles">PlayStation & Xbox</a>
-          <a href="#tuning">Оптимизация и разгон</a>
-          <a href="#materials">Расходники</a>
-          <a href="#coverage">Районы выезда</a>
-          <a href="#warranty">Регламент и гарантия</a>
-          <a href="#faq">FAQ</a>
+          <a href="/remont-pk/">Ремонт и чистка ПК</a>
+          <a href="/remont-noutbukov/">Чистка и ремонт ноутбуков</a>
+          <a href="/remont-konsoley/">PlayStation и Xbox</a>
+          <a href="/ustanovka-windows/">Установка Windows и ПО</a>
+          <a href="/sborka-pk/">Сборка ПК и разгон</a>
+          <a href="/#calc">Калькулятор стоимости</a>
+          <a href="/#materials">Термоинтерфейсы и материалы</a>
+          <a href="/#faq">Частые вопросы</a>
         </div>
       </div>
 
@@ -1079,10 +1130,27 @@
 
     <div class="footer-bottom">
       <span>© 2026 KurskPC. Частный мастер, г. Курск.</span>
+      <div class="footer-legal">
+        <a href="/privacy.html">Политика конфиденциальности</a>
+        <button type="button" class="footer-cookie-btn" id="cookieSettingsBtn">Настройки cookie</button>
+      </div>
     </div>
   </div>
 </footer>
 
-<script src="scripts/main.js"></script>
+<div class="cookie-banner" id="cookieBanner" role="dialog" aria-live="polite" aria-label="Уведомление об использовании cookie" hidden>
+  <div class="cookie-banner-inner">
+    <div class="cookie-banner-text">
+      <strong>Файлы cookie и аналитика</strong>
+      <p>Мы используем Яндекс.Метрику (без Вебвизора) и технические cookie для подсчёта посещений и кликов по контактам. Аналитика включается только после вашего согласия. Подробнее — в <a href="/privacy.html">Политике обработки данных</a>.</p>
+    </div>
+    <div class="cookie-banner-actions">
+      <button type="button" class="btn btn-outline btn-sm" id="cookieDeclineBtn">Отклонить</button>
+      <button type="button" class="btn btn-lime btn-sm" id="cookieAcceptBtn">Принять</button>
+    </div>
+  </div>
+</div>
+
+<script src="/scripts/main.js"></script>
 </body>
 </html>
